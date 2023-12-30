@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+    db:
+        image: mysql:latest
+        restart: always
+        ports:
+            - 3309:3309
+        environment:
+            POSTGRES_PORT: 5432
+            MYSQL_DATABASE: hrt-countries
+            MYSQL_USER: hrt-user
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_TCP_PORT: 3309
